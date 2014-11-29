@@ -5,7 +5,12 @@ angular.module('mydieselmechanicApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
-    }];
+    },
+    {
+      'title': 'Home2',
+      'link': '/home'
+    }
+    ];
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;

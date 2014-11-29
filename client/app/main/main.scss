@@ -4,27 +4,28 @@
 
 #banner {
     border-bottom: none;
-    margin-top: -20px;
+    margin-top: $padding-large-vertical * -2;
+    margin-bottom: $padding-large-vertical * 2;
 }
 
 #banner h1 {
-    font-size: 60px;
+    font-size: $font-size-h2*2;
     line-height: 1;
     letter-spacing: -1px;
 }
 
 .hero-unit {
     position: relative;
-    padding: 30px 15px;
-    color: #F5F5F5;
+    padding: ($padding-large-vertical*3) ($padding-large-horizontal*2);
+    color: $panel-primary-text;
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    background: #4393B9;
+    background: $brand-primary;
 }
 
 .footer {
     text-align: center;
-    padding: 30px 0;
-    margin-top: 70px;
-    border-top: 1px solid #E5E5E5;
+    padding: ($padding-large-vertical*3) 0;
+    margin-top: $padding-large-vertical*7;
+    border-top: 1px solid $legend-border-color;
 }
