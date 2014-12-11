@@ -11,29 +11,35 @@ angular.module('mydieselmechanicApp')
 
     $scope.slides = [
       {
-        image: 'assets/images/ford-f-250-custom.jpg',
+        image: 'assets/images/f-250/1.jpg',
         text: '',
-        heading: 'F-250'
+        heading: 'F-250',
+        id: 1
+
       },
       {
-        image: 'assets/images/ford-f-350-custom-2.jpg',
+        image: 'assets/images/f-350/1.jpg',
         text: '',
-        heading: 'F-350'
+        heading: 'F-350',
+        id: 2
       },
       {
-        image: 'assets/images/ford-f-350-custom.jpg',
+        image: 'assets/images/jeep/1.jpg',
         text: '',
-        heading: 'F-350'
+        heading: 'Jeep',
+        id: 3
       },
       {
-        image: 'assets/images/jeep-custom.jpg',
+        image: 'assets/images/jeep-wrangler/1.jpg',
         text: '',
-        heading: 'Jeep'
+        heading: 'Jeep Wrangler',
+        id: 4
       },
       {
-        image: 'assets/images/jeep-wrangler-custom.jpg',
+        image: 'assets/images/mustang/1.jpg',
         text: '',
-        heading: 'Jeep Wrangler'
+        heading: 'Mustang',
+        id: 5
       }
     ];
 

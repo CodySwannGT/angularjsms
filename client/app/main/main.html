@@ -1,12 +1,6 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
+<div ng-include="'components/header/header.html'"></div>
 
-<header class="hero-unit" id="banner">
-  <div class="container">
-    <h1>My Diesel Mechanic</h1>
-    <p class="lead">Specializing in Power Strokes 7.3l and 6.0l Ford Turbo Diesels</p>
-    <img src="assets/images/ford-logo-200w.png" alt="I'm Yeoman">
-  </div>
-</header>
 
 <div class="container">
   <div class="row">
@@ -92,9 +86,9 @@
         <div class="panel-body">
           <carousel interval="photosInterval">
             <slide ng-repeat="slide in slides" active="slide.active">
-              <img ng-src="{{slide.image}}" style="margin:auto;">
+              <a ui-sref="auto.detail({id:slide.id})"><img ng-src="{{slide.image}}" style="margin:auto;"></a>
               <div class="carousel-caption">
-                <h4>{{slide.heading}}</h4>
+                <h4><a ui-sref="auto.detail({id:slide.id})">{{slide.heading}}</a></h4>
                 <p>{{slide.text}}</p>
               </div>
             </slide>
