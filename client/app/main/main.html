@@ -1,14 +1,121 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
+<div ng-include="'components/header/header.html'"></div>
 
-<header class="hero-unit" id="banner">
-  <div class="container">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
-  </div>
-</header>
 
 <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Contact Info</h3>
+        </div>
+        <div class="panel-body">
+          <a href="//www.google.com/url?sa=D&amp;oi=plus&amp;q=https://www.google.com/maps/place/My%2BMechanic%2Bof%2Bthe%2BT.C,%2Bllc/data%3D!4m2!3m1!1s0x88dee963f9567c67:0x814c832171f455ab?gl%3DUS%26hl%3Den" target="_blank">
+            <img alt="Location" src="//www.google.com/maps/vt/data=IPJF7m116ARqg0ah3PQQcPJjK4i6YlvS9ebHQ-ChEK6XIRLs0g89A8Tdzbyv0emMeoYB_WdX9YU1dQ"  class="img-full-width img-responsive">
+          </a>
+
+          <ul class="fa-ul">
+            <li class="lead">
+              <i class="fa-li fa fa-map-marker"></i>
+              <a href="//www.google.com/url?sa=D&amp;oi=plus&amp;q=https://www.google.com/maps/place/My%2BMechanic%2Bof%2Bthe%2BT.C,%2Bllc/data%3D!4m2!3m1!1s0x88dee963f9567c67:0x814c832171f455ab?gl%3DUS%26hl%3Den" target="_blank"><address>1974 SW Biltmore St Port St Lucie, FL 34984‎</address></a>
+            </li>
+            <li class="lead">
+              <i class="fa-li fa fa-phone"></i>
+              <a href="tel:7728789166">(772) 878-9166</a>
+            </li>
+            <li class="lead">
+              <i class="fa-li fa fa-clock-o"></i>
+              Open Monday-Friday 9:00 am - 6:00 pm  
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Why Us?</h3>
+        </div>
+        <div class="panel-body">
+          <p>We believe honesty pays and that's been our philosophy for over 20 Years.</p>
+          <p>We get the job done right the first time at an honest price.</p>
+          <p>We're Ford dealer trained and certified since 1992, ASE Certified and Licensed Technicians</p>
+          <p>We'll always give it to you straight - even when you might not want to hear it.</p>
+          <p>We offer same-day appointments and quick turn-arounds on most services, so <strong><a href="tel:7728789166">call us today</a></strong> to get your truck in here!</p>
+        </div>
+      </div>
+
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Our Services</h3>
+        </div>
+
+        <div class="panel-body columned">
+          <div class="half-size">
+            <ul class="fa-ul">
+              <li><i class="fa-li fa fa-check"></i>Vehicle Service</li>
+              <li><i class="fa-li fa fa-check"></i>General Repairs</li>
+              <li><i class="fa-li fa fa-check"></i>Major Repairs</li>
+              <li><i class="fa-li fa fa-check"></i>Timing Belts</li>
+              <li><i class="fa-li fa fa-check"></i>Brakes</li>
+            </ul>
+          </div>
+          <div class="half-size">
+            <ul class="fa-ul">
+              <li><i class="fa-li fa fa-check"></i>Air Conditioning</li>
+              <li><i class="fa-li fa fa-check"></i>Water Pumps</li>
+              <li><i class="fa-li fa fa-check"></i>Engine Builds</li>
+              <li><i class="fa-li fa fa-check"></i>Maintenance</li>
+              <li><i class="fa-li fa fa-check"></i>Oil Changes</li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Our Work</h3>
+        </div>
+        <div class="panel-body">
+          <carousel interval="photosInterval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+              <a ui-sref="auto.detail({id:slide.id})"><img ng-src="{{slide.image}}" style="margin:auto;"></a>
+              <div class="carousel-caption">
+                <h4><a ui-sref="auto.detail({id:slide.id})">{{slide.heading}}</a></h4>
+                <p>{{slide.text}}</p>
+              </div>
+            </slide>
+          </carousel>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">What Our Customers Say</h3>
+        </div>
+        <div class="panel-body">
+          <blockquote>
+            <p>Joe and his team literally saved my truck.</p>
+            <p>When I brought it to him, I was considering selling it and getting what I could for it because I was having so many problems.</p>
+            <p>After some honest discussions, I decided to let Joe's team try and fix it and haven't had a problem since.</p>
+            <footer>Cody Swann <cite title="Source Title">2006 F-250</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--div class="container">
   <div class="row">
     <div class="col-lg-12">
       <h1 class="page-header">Features:</h1>
@@ -27,12 +134,6 @@
       </span>
     </p>
   </form>
-</div>
+</div-->
 
-<footer class="footer">
-  <div class="container">
-      <p>Angular Fullstack v2.0.13 |
-        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
-         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
-  </div>
-</footer>
+<div ng-include="'components/footer/footer.html'"></div>

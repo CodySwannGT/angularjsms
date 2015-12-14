@@ -15,10 +15,26 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
     padding: 0.2em 0;
 }
 
+a {
+  address {
+    margin-bottom: 0;
+  }
+}
+
+.panel-body.columned { white-space: nowrap; }
+.half-size { display: inline-block; width: 50%; white-space: normal; }
+ 
+.img-responsive.img-full-width {
+	width: 100%;
+  margin-bottom: $padding-large-vertical * 2;
+}
+
 // Component styles are injected through grunt
 // injector
 @import 'account/login/login.scss';
 @import 'admin/admin.scss';
+@import 'auto/auto.scss';
+@import 'home/home.scss';
 @import 'main/main.scss';
 @import 'modal/modal.scss';
 // endinjector
